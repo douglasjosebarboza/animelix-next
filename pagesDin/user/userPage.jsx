@@ -11,7 +11,7 @@ import Loading from "../../components/loading"
 export default function UserPage() {
   const [ animes, setAnimes] = useState([])
   const [ episodes, setEpisodes] = useState([])
-  const [isLoading, setIsLoading] = useState(true);
+  const [ isLoading, setIsLoading ] = useState(true);
   const session = useSession()
 
   useEffect(() => {
@@ -19,6 +19,10 @@ export default function UserPage() {
       fetchAnime()
     }
   }, [session])
+
+  function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms))
+  }
 
   async function fetchAnime() {
     setIsLoading(true)
@@ -36,9 +40,11 @@ export default function UserPage() {
     let episodesArray = []
     let animesArray = []
     for (let i = 0; i < animesReq.length; i++) {
+      const delayTime = 1000
       const anime = await getAnime(animesReq[i].malId)
       animesArray.push(anime)
       episodesArray.push(animesReq[i].episodes)
+      await delay(delayTime)
     }
     setAnimes(animesArray)
     setEpisodes(episodesArray)
