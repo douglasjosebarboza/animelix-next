@@ -20,10 +20,6 @@ export default function UserPage() {
     }
   }, [session])
 
-  function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms))
-  }
-
   async function fetchAnime() {
     setIsLoading(true)
     const userEmail = session.data.user.email
@@ -40,11 +36,9 @@ export default function UserPage() {
     let episodesArray = []
     let animesArray = []
     for (let i = 0; i < animesReq.length; i++) {
-      const delayTime = 1000
       const anime = await getAnime(animesReq[i].malId)
       animesArray.push(anime)
       episodesArray.push(animesReq[i].episodes)
-      await delay(delayTime)
     }
     setAnimes(animesArray)
     setEpisodes(episodesArray)
