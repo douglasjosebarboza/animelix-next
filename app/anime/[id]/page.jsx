@@ -1,4 +1,4 @@
-import AnimePage from "@/pages/anime/animePage"
+import AnimePage from "@/pagesDin/anime/animePage"
 import { getCurrentUser } from "@/lib/session"
 import { redirect } from "next/navigation"
 

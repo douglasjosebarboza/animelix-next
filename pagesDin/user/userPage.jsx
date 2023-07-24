@@ -54,8 +54,8 @@ export default function UserPage() {
       </div>
       <div className="flex flex-col gap-4 mb-4">
         {animes.map((anime, index) => (
-          <Link className="transition ease-in-out duration-100 hover:scale-105" href={`/anime/${anime.data.mal_id}`}>
-            <div className="flex items-center gap-4 bg-blue-500 rounded-xl overflow-hidden w-full pr-4 shadow-2xl" key={index}>
+          <Link key={index} className="transition ease-in-out duration-100 hover:scale-105" href={`/anime/${anime.data.mal_id}`}>
+            <div className="flex items-center gap-4 bg-blue-500 rounded-xl overflow-hidden w-full pr-4 shadow-2xl">
               <div>
                 <Image
                   src={anime.data.images.jpg.large_image_url}

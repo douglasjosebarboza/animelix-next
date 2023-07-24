@@ -1,4 +1,4 @@
-import HomePage from "@/pages/home/homePage"
+import HomePage from "@/pagesDin/home/homePage"
 import { getCurrentUser } from "@/lib/session"
 import { redirect } from "next/navigation"
 

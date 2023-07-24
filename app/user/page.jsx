@@ -1,4 +1,4 @@
-import UserPage from "@/pages/user/userPage"
+import UserPage from "@/pagesDin/user/userPage"
 import Header from "@/components/header"
 import { getCurrentUser } from "@/lib/session"
 import { redirect } from "next/navigation"
