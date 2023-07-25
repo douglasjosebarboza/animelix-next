@@ -55,7 +55,7 @@ export default function AnimePage({ id }) {
         <Header 
           inputCondition={false}
         />
-        <main className="flex h-[calc(100vh - 4rem)] justify-center items-center">
+        <main className="flex h-[calc(100vh - 4rem)] pt-32 justify-center items-center">
           <div className="flex flex-row rounded-3xl w-4/5 h-fit bg-blue-500 overflow-hidden shadow-2xl">
             <div>
               <Image 
@@ -68,9 +68,9 @@ export default function AnimePage({ id }) {
             </div>
             <div className="flex flex-col items-center justify-center w-full text-white">
               <div className="w-full text-center">
-                <h1 className="text-3xl [text-shadow:_0_0_7px_black] font-bold px-3">{anime.title}</h1>
+                <h1 className="text-xl md:text-3xl [text-shadow:_0_0_7px_black] font-bold px-3 mb-10 max-h-[112px] md:mb-0">{anime.title}</h1>
                 <div className="flex flex-row justify-between">
-                  <div className="flex flex-col px-8 my-10 gap-2">
+                  <div className="hidden lg:flex flex-col px-8 my-10 gap-2">
                     <div className="flex flex-row gap-4">
                       <p>{anime.year}</p>
                       <p>{anime.score}</p>
@@ -83,7 +83,7 @@ export default function AnimePage({ id }) {
                     })}
                     </ul>
                   </div>
-                  <div className="flex flex-col items-center justify-center mr-10">
+                  <div className="flex flex-col justify-center items-center m-auto w-9/12 lg:mr-10 lg:m-0 lg:w-auto">
                     <form className="flex flex-col gap-4" onSubmit={handleSubmit(onSubmit)}>
                       <select className="w-full bg-white p-2 rounded-md font-semibold text-pink-600 text-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-pink-600 scrolling" defaultValue={'0'} {...register('episode')}>
                         <option value={'0'} disabled className="hidden">Selecione o ultimo episódio visto</option>
@@ -102,7 +102,7 @@ export default function AnimePage({ id }) {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-44 overflow-y-auto scrolling">
+              <div className="hidden md:block mt-3 w-full h-32 overflow-y-auto scrolling lg:h-44">
               {paragraphs.map((paragraph, index) => (
                 <p className="text-lg px-8" key={index}>
                   {paragraph}

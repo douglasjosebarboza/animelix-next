@@ -48,11 +48,11 @@ export default function UserPage() {
   if(isLoading)
     return <Loading />
   return (
-    <div className="flex flex-col items-center pt-20">
+    <main className="flex flex-col items-center pt-20">
       <div>
         <p className="text-white text-3xl [text-shadow:_0_0_7px_black] font-bold my-5">Seu histórico de animes</p>
       </div>
-      <div className="flex flex-col gap-4 mb-4">
+      <div className="flex flex-col gap-4 mb-4 mx-6">
         {animes.map((anime, index) => (
           <Link key={index} className="transition ease-in-out duration-100 hover:scale-105" href={`/anime/${anime.data.mal_id}`}>
             <div className="flex items-center gap-4 bg-blue-500 rounded-xl overflow-hidden w-full pr-4 shadow-2xl">
@@ -69,9 +69,9 @@ export default function UserPage() {
                 <div>
                   <h1 className="text-center text-white text-xl [text-shadow:_0_0_7px_black] font-bold mb-8">{anime.data.title}</h1>
                   <div className="text-white">
-                    <p><strong>Status de lançamento:</strong> {anime.data.status}</p>
-                    <p><strong>Dia:</strong> {anime.data.broadcast.day}</p>
-                    <p><strong>Hora:</strong> {anime.data.broadcast.time} JPT</p>
+                    <p className="hidden sm:block"><strong>Status de lançamento:</strong> {anime.data.status}</p>
+                    <p className="hidden sm:block"><strong>Dia:</strong> {anime.data.broadcast.day}</p>
+                    <p className="hidden sm:block"><strong>Hora:</strong> {anime.data.broadcast.time} JPT</p>
                     <p><strong>Ultimo episódio visto:</strong> {episodes[index]}</p>
                   </div>
                 </div>
@@ -80,5 +80,5 @@ export default function UserPage() {
           </Link>
         ))}
       </div>
-    </div>
+    </main>
 )}
