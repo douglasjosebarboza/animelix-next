@@ -1,5 +1,5 @@
 function delay() {
-  return new Promise(resolve => setTimeout(resolve, 10))
+  return new Promise(resolve => setTimeout(resolve, 20))
 }
 
 export async function getSeasonNow(page) {
