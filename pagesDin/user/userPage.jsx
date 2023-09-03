@@ -18,7 +18,7 @@ export default function UserPage() {
     if(session.status === 'authenticated') {
       fetchAnime()
     }
-  }, [session])
+  }, [])
 
   async function fetchAnime() {
     setIsLoading(true)
