@@ -15,7 +15,7 @@ O design responsivo da interface proporciona uma experiência consistente em dif
 Essas funcionalidades foram incorporadas para oferecer aos usuários uma plataforma abrangente e personalizada para gerenciar seus interesses em animes.
 
 ### Tecnologias e funcionalidades
-- NextJS
+- Next JS
 - Tailwind CSS
 - Sistema de cadastro
 - Resposividade
