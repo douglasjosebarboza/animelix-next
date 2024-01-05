@@ -23,10 +23,10 @@ export default function Pagination({
   }
 
   return (
-    <div className="flex flex-row justify-center items-center gap-6 pb-7 text-white font-bold text-xl">
+    <div className="flex flex-row items-center justify-center gap-6 pb-7 text-xl font-bold text-white">
       <button
         type="button"
-        className="w-10 h-10 rounded-full bg-blue-600 transition duration-100 ease-in hover:scale-105"
+        className="h-10 w-10 rounded-full bg-blue-600 transition duration-100 ease-in hover:scale-105"
         onClick={downNumberPage}
         hidden={page === 1 || isLoading}
       >
@@ -34,13 +34,13 @@ export default function Pagination({
       </button>
       <button
         type="button"
-        className="w-10 h-10 rounded-full bg-blue-600 cursor-default"
+        className="h-10 w-10 cursor-default rounded-full bg-blue-600"
       >
         {page}
       </button>
       <button
         type="button"
-        className="w-10 h-10 rounded-full bg-blue-600 transition duration-100 ease-in hover:scale-105"
+        className="h-10 w-10 rounded-full bg-blue-600 transition duration-100 ease-in hover:scale-105"
         onClick={upNumberPage}
         hidden={page === maxPages || isLoading}
       >
