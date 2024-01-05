@@ -1,9 +1,9 @@
-import Form from "@/components/form" 
+import Form from '@/components/form'
 
 export default function EntraPage() {
-	return (
-		<main className="flex items-center justify-center h-screen">
-			<Form
+  return (
+    <main className="flex h-screen items-center justify-center">
+      <Form
         title="Entre na sua conta"
         functionName="SignIn"
         textButton="Acessar"
@@ -11,6 +11,6 @@ export default function EntraPage() {
         href="register"
         textResponse="Crie uma já"
       />
-		</main>
-	)
+    </main>
+  )
 }

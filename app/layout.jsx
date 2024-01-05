@@ -1,5 +1,5 @@
 import AuthProvider from '@/components/authProvider'
-import { SearchProvider } from "@/context/SearchContext"
+import { SearchProvider } from '@/context/SearchContext'
 import './globals.css'
 import localFont from 'next/font/local'
 
@@ -35,12 +35,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="pt-br" className={nunito.className} >
-      <body className="bg-fixed bg-gradient-to-b from-fuchsia-900 to-fuchsia-950">
+    <html lang="pt-br" className={nunito.className}>
+      <body className="bg-gradient-to-b from-fuchsia-900 to-fuchsia-950 bg-fixed">
         <AuthProvider>
-          <SearchProvider>
-            {children}
-          </SearchProvider>
+          <SearchProvider>{children}</SearchProvider>
         </AuthProvider>
       </body>
     </html>

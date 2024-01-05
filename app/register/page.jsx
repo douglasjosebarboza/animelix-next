@@ -1,8 +1,8 @@
 import Form from '@/components/form'
 
 export default function CadastraPage() {
-	return (
-		<main className="flex items-center justify-center h-screen">
+  return (
+    <main className="flex h-screen items-center justify-center">
       <Form
         title="Crie sua conta"
         functionName="Register"
@@ -11,6 +11,6 @@ export default function CadastraPage() {
         href="login"
         textResponse="Acesse a sua conta já"
       />
-		</main>
-	)
+    </main>
+  )
 }

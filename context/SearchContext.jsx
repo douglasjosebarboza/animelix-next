@@ -12,9 +12,7 @@ export function SearchProvider({ children }) {
       setSearching(event.target.value)
       event.target.value = ''
     }
-    if(event.type === 'click')
-      setSearching(event.target.value)
-
+    if (event.type === 'click') setSearching(event.target.value)
   }
 
   return (

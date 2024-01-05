@@ -1,22 +1,22 @@
-import { db } from "@/lib/db"
-import { NextResponse } from "next/server";
+import { db } from '@/lib/db'
+import { NextResponse } from 'next/server'
 
-export async function POST(request){
+export async function POST(request) {
   const data = await request.json()
   const { userEmail } = data
 
   const user = await db.user.findUnique({
     where: {
-      email: userEmail
-    }
+      email: userEmail,
+    },
   })
 
   const animes = await db.anime.findMany({
     where: {
       userId: {
-        has: user.id
-      }
-    }
+        has: user.id,
+      },
+    },
   })
 
   return NextResponse.json(animes)
