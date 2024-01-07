@@ -20,4 +20,4 @@ Essas funcionalidades foram incorporadas para oferecer aos usuários uma platafo
 - Sistema de cadastro
 - Resposividade
 
-### Acesse o site por [aqui](https://animelix-next-byarcaz2k-douglasjosebarboza.vercel.app/)
+### Acesse o site por [aqui](https://animelix-next.vercel.app/)
